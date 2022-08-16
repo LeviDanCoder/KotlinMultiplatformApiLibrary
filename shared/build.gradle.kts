@@ -39,7 +39,7 @@ kotlin {
 
     cocoapods {
         summary = "Some description for the Shared Module"
-        homepage = "Link to the Shared Module homepage"
+        homepage = "https://github.com/LeviDanCoder/KotlinMultiplatformApiLibrary"
         ios.deploymentTarget = "14.1"
         framework {
             baseName = "shared"
@@ -111,5 +111,11 @@ android {
     defaultConfig {
         minSdk = 23
         targetSdk = 32
+    }
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
